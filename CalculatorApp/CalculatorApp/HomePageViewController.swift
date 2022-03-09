@@ -7,14 +7,23 @@
 
 import UIKit
 
+enum Operations: String {
+    case Add = "+"
+    case Subtract = "-"
+    case Divide = "/"
+    case Multiply = "*"
+    case Percentage = "%"
+    case NULL = "Null"
+}
+
+
 class HomePageViewController: UIViewController {
     
-    var firstNumber : String = ""
-    var secondNumber : String = ""
-    var operatorKey : String = ""
-    var haveResult : Bool = false
+    var runningNumber : String = ""
+    var firstValue : String = ""
+    var secondValue : String = ""
     var resultNumber : String = ""
-    var numberAfterResult : String = ""
+    var currentOperation : Operations = .NULL
     
         
     @IBOutlet var calculatorDisplay: UILabel!
@@ -27,116 +36,107 @@ class HomePageViewController: UIViewController {
         for button in calculatorButtons {
             button.layer.cornerRadius = button.frame.size.height / 2
         }
+            
+        calculatorDisplay.text = "0"
     }
     
-    @IBAction func clearButton(_ sender: Any) {
-            firstNumber = ""
-            secondNumber = ""
-            operatorKey = ""
-            haveResult = false
-            resultNumber = ""
-            numberAfterResult = ""
-            calculatorDisplay.text = "0"
+    @IBAction func clearButton(_ sender: UIButton) {
+        runningNumber = ""
+        firstValue = ""
+        secondValue = ""
+        resultNumber = ""
+        currentOperation = .NULL
+        calculatorDisplay.text = "0"
     }
+   
     
     @IBAction func numberClicked(_ sender: UIButton) {
-        if operatorKey == "" {
-            firstNumber += String(sender.tag)
-            calculatorDisplay.text = firstNumber
-        } else if operatorKey != "" && !haveResult {
-            secondNumber += String(sender.tag)
-            calculatorDisplay.text = secondNumber
-        } else if operatorKey != "" && haveResult {
-            numberAfterResult += String(sender.tag)
-            calculatorDisplay.text = numberAfterResult
+        if runningNumber.count <= 9 {
+            runningNumber += "\(sender.tag)"
+            calculatorDisplay.text = runningNumber
         }
     }
+    
     @IBAction func decimalDotClicked(_ sender: UIButton) {
-        if operatorKey == "" {
-            firstNumber += "."
-            calculatorDisplay.text = firstNumber
-        } else if operatorKey != "" && !haveResult {
-            secondNumber += "."
-            calculatorDisplay.text = secondNumber
+        if runningNumber.count <= 8 && calculatorDisplay.text?.contains(".") == false && runningNumber != "0." {
+            if runningNumber != "0" {
+            runningNumber += "."
+            calculatorDisplay.text = runningNumber
+            } else if calculatorDisplay.text == "0" || runningNumber == "0" {
+                runningNumber = "0."
+                calculatorDisplay.text = "0"
+            } else {
+                runningNumber = "0."
+                calculatorDisplay.text = "0"
+            }
+        }
+    }
+    
+    
+    @IBAction func addButton(_ sender: UIButton) {
+        operation(operation: .Add)
+    }
+    
+    @IBAction func subtractButton(_ sender: UIButton) {
+        operation(operation: .Subtract)
+    }
+    
+    @IBAction func multiplyButton(_ sender: UIButton) {
+        operation(operation: .Multiply)
+    }
+    
+    @IBAction func divisionButton(_ sender: UIButton) {
+        operation(operation: .Divide)
+    }
+    
+    @IBAction func percentageButton(_ sender: UIButton) {
+        operation(operation: .Percentage)
+    }
+    
+    @IBAction func signChangingButton(_ sender: UIButton) {
+        if calculatorDisplay.text!.hasPrefix("-") {
+            calculatorDisplay.text! = runningNumber
+            
+            calculatorDisplay.text = calculatorDisplay.text!
+        } else {
+            calculatorDisplay.text = "-\(String(describing: calculatorDisplay.text!))"
         }
     }
     
-    @IBAction func numberZeroClicked(_ sender: UIButton) {
-        if operatorKey == "" && calculatorDisplay.text != "0" {
-            firstNumber += String(sender.tag)
-            calculatorDisplay.text = firstNumber
+    @IBAction func equalToButton(_ sender: UIButton) {
+        operation(operation: currentOperation)
+    }
+    
+    func operation(operation: Operations) {
+        if currentOperation != .NULL {
+            if runningNumber != "" {
+                secondValue = runningNumber
+                runningNumber = ""
+                
+                if currentOperation == .Add {
+                    resultNumber = "\(Double(firstValue)! + Double(secondValue)!)"
+                }else if currentOperation == .Subtract {
+                    resultNumber = "\(Double(firstValue)! - Double(secondValue)!)"
+                }else if currentOperation == .Multiply {
+                    resultNumber = "\(Double(firstValue)! * Double(secondValue)!)"
+                }else if currentOperation == .Divide {
+                    resultNumber = "\(Double(firstValue)! / Double(secondValue)!)"
+                }else if currentOperation == .Percentage {
+                    resultNumber = "\(Double(firstValue)! / Double(secondValue)! * 100)"
+                }
+                
+                firstValue = resultNumber
+                if (Double(resultNumber)!.truncatingRemainder(dividingBy: 1) == 0 ) {
+                    resultNumber = "\(Int(Double(resultNumber)!))"
+                }
+                calculatorDisplay.text = resultNumber
+            }
+            currentOperation = operation
+        } else {
+            firstValue = runningNumber
+            runningNumber = ""
+            currentOperation = operation
         }
     }
-    
-    @IBAction func addButton(_ sender: Any) {
-        operatorKey = "+"
-    }
-    
-    @IBAction func subtractButton(_ sender: Any) {
-        operatorKey = "-"
-    }
-    
-    @IBAction func multiplyButton(_ sender: Any) {
-        operatorKey = "x"
-    }
-    
-    @IBAction func divisionButton(_ sender: Any) {
-        operatorKey = "÷"
-    }
-    
-    @IBAction func percentageButton(_ sender: Any) {
-        operatorKey = "%"
-    }
-    
-    @IBAction func signChangingButton(_ sender: Any) {
-    }
-    
-    @IBAction func equalToButton(_ sender: Any) {
-        resultNumber = String(Int(performOperations()))
-        calculatorDisplay.text = resultNumber
-        numberAfterResult = ""
-    }
-    
-    func performOperations() -> Double {
-        if operatorKey == "+" {
-            if !haveResult {
-                haveResult = true
-                return Double(firstNumber)! + Double(secondNumber)!
-            } else {
-                return Double(resultNumber)! + Double(numberAfterResult)!
-            }
-        } else if operatorKey == "-" {
-            if !haveResult {
-                haveResult = true
-                return Double(firstNumber)! - Double(secondNumber)!
-            } else {
-                return Double(resultNumber)! - Double(numberAfterResult)!
-            }
-        } else if operatorKey == "÷" {
-            if !haveResult {
-                haveResult = true
-                return Double(firstNumber)! / Double(secondNumber)!
-            } else {
-                return Double(resultNumber)! / Double(numberAfterResult)!
-            }
-        } else if operatorKey == "x" {
-            if !haveResult {
-                haveResult = true
-                return Double(firstNumber)! * Double(secondNumber)!
-            } else {
-                return Double(resultNumber)! * Double(numberAfterResult)!
-            }
-        } else if operatorKey == "%" {
-            if !haveResult {
-                haveResult = true
-                return Double(firstNumber)! * 0.01
-            } else {
-                return Double(resultNumber)! * 0.01
-            }
-        }
-        return 0
-    }
-    
+
 }
-
-
