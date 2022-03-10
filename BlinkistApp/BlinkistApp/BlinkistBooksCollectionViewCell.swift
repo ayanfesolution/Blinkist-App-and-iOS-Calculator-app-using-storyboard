@@ -15,14 +15,14 @@ class BlinkistBooksCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var book_type: UILabel!
     @IBOutlet weak var lenght: UILabel!
    
-    func setup(with book: BookFileDetails) {
+    func setup(with book: BookFillDetails) {
         
         lenght.text = String(book.length)
         book_type.text = book.bookType.rawValue
         author.text = book.author
-        access.image = book.
+       // access.image = book.
         title.text = book.title
-        image.image = book.
+       // image.image = book.
         
     }
 }

@@ -630,7 +630,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uR1-ur-95Z"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWz-zk-ujP"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SF9-ni-WYe">
@@ -646,7 +646,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPT-aA-5VH"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EnK-VN-xVs"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0l-jq-7v2">
@@ -662,7 +662,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbh-T6-W6R"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbs-Pa-dej"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-eb-nrs">
@@ -776,7 +776,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V4A-pR-Bq7"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Mb-dl-ZCH"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-Mk-B9R">
@@ -792,7 +792,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OwC-yM-QZv"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ov3-lu-oVk"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ya-Co-rbB">
@@ -808,7 +808,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jII-QX-w60"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VhA-Mq-Rei"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJH-cM-i3v">
@@ -923,7 +923,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yFi-Jg-lA5"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JKP-Ot-kbo"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPg-kK-NVF">
@@ -939,7 +939,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYa-Va-Oqg"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frY-PU-IWe"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhF-7P-bJT">
@@ -955,7 +955,7 @@
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddV-Ky-hjz"/>
+                                                                    <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0N-AC-RO9"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0id-1F-17g">
@@ -1072,7 +1072,7 @@
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7M-zt-ps8"/>
+                                                            <action selector="numberClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsF-BD-aWV"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHq-Hg-Bcd">
@@ -1150,7 +1150,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="calculatorDisplay" destination="47p-Ij-Rj4" id="dD3-Ii-9dZ"/>
+                        <outlet property="calculatorDisplay" destination="y7s-hy-and" id="zi1-Gj-BAA"/>
                         <outletCollection property="calculatorButtons" destination="qv1-p0-2Ug" collectionClass="NSMutableArray" id="8Z6-XS-o38"/>
                         <outletCollection property="calculatorButtons" destination="ExH-sq-uiO" collectionClass="NSMutableArray" id="X3T-mW-QYg"/>
                         <outletCollection property="calculatorButtons" destination="eP0-SJ-8Tb" collectionClass="NSMutableArray" id="wyo-KF-Urg"/>
