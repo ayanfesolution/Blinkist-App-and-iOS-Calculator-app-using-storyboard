@@ -37,7 +37,7 @@ class HomePageViewController: UIViewController {
             button.layer.cornerRadius = button.frame.size.height / 2
         }
             
-        calculatorDisplay.text = "0"
+            calculatorDisplay.text = "0"
     }
     
     @IBAction func clearButton(_ sender: UIButton) {

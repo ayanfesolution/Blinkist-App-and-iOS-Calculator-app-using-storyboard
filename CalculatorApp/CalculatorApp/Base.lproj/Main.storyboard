@@ -1150,7 +1150,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="calculatorDisplay" destination="y7s-hy-and" id="zi1-Gj-BAA"/>
+                        <outlet property="calculatorDisplay" destination="47p-Ij-Rj4" id="bci-HY-4D2"/>
                         <outletCollection property="calculatorButtons" destination="qv1-p0-2Ug" collectionClass="NSMutableArray" id="8Z6-XS-o38"/>
                         <outletCollection property="calculatorButtons" destination="ExH-sq-uiO" collectionClass="NSMutableArray" id="X3T-mW-QYg"/>
                         <outletCollection property="calculatorButtons" destination="eP0-SJ-8Tb" collectionClass="NSMutableArray" id="wyo-KF-Urg"/>
